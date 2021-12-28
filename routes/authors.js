@@ -38,6 +38,7 @@ router.post("/", async (req, res) => {
   }
 });
 
+// Create show route
 router.get("/:id", async (req, res) => {
   try {
     const author = await Author.findById(req.params.id);
@@ -48,6 +49,7 @@ router.get("/:id", async (req, res) => {
   }
 });
 
+//Create edit route
 router.get("/:id/edit", async (req, res) => {
   try {
     const author = await Author.findById(req.params.id);
